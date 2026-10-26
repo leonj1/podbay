@@ -26,7 +26,7 @@ jobs:
     # +lint on the self-hosted box (free) — and ubuntu-latest there BURNS metered minutes. So skip it
     # anywhere that isn't the public mirror.
     if: ${{ github.repository != 'velsa/podbay' }}
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
